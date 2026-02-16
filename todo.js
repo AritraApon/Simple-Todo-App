@@ -25,7 +25,8 @@ document.getElementById('add_btn')
         //   new Items add
         const newLi = document.createElement('li');
         newLi.classList.add(
-            "bg-[#004FFA47]",
+            "bg-indigo-100",
+            "text-indigo-800",
             "mx-3",
             "my-3",
             "py-3",
@@ -88,15 +89,17 @@ document.getElementById('add_btn')
 const mainDiv = document.getElementById('main_Div');
 
 document.getElementById('dark_mood').addEventListener('click',
-    function(){
-        mainDiv.style.backgroundColor ='#0B0D179C ';
-         mainDiv.style.color ='white';
+    function () {
+        document.body.style.backgroundColor = '#00000040'
+        mainDiv.style.backgroundColor = ' #292929';
+        mainDiv.style.color = 'white';
     }
 )
 
 document.getElementById('light_mood').addEventListener('click',
-    function(){
-        mainDiv.style.backgroundColor ='white';
-         mainDiv.style.color ='black'
+    function () {
+         document.body.style.backgroundColor = ' #61d3d15b'
+        mainDiv.style.backgroundColor = 'white';
+        mainDiv.style.color = 'black'
     }
 )
