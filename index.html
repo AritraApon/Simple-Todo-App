@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO_DO APP</title>
+    <!-- tailwindcss cnd -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--  font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body class="bg-[#61d3d1]">
+
+    <!-- todo task : -->
+    <section class="max-w-[1440px] m-auto text-center">
+
+        <div id="main_Div" class="bg-white max-w-[300px] md:max-w-[500px] m-auto mt-[10%] rounded-xl">
+
+            <!-- dark mood light mood  -->
+            <div class="text-right pt-2 pr-1">
+                <!-- light_mood -->
+                <button id="light_mood" class="w-[30px] h-[30px] bg-[#fffcfc] rounded-full shadow-2xl text-xl border hover:bg-[#dedcdc] ">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
+                <!-- dark_mood -->
+                <button id="dark_mood" class="w-[30px] h-[30px] bg-[#000000] rounded-full shadow-2xl text-xl text-white hover:bg-[#3e3d3d]">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+            </div>
+
+
+
+
+            <h1 class="text-3xl md:text-5xl font-extrabold text-center  pt-5"><span
+                    class="text-[#e89907]">TO</span><span class="text-[#1010f4]">DO</span> LIST</h1>
+
+
+
+            <!-- input filed  -->
+
+            <input id="add_todo_area" type="text" placeholder="Add your new todo" class="border-2 border-[#3872f1] bg-[#c7d5f1d8]
+                  px-2 py-3 mt-5 w-[80%] placeholder: text-bold text-[18px] font-bold
+            ">
+
+
+            <button id="add_btn" class="bg-[#3872f1] px-3 py-2.5
+                 ml-3 hover:bg-[#1f50b9] text-white font-extrabold
+            ">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <!-- add todo items show here  -->
+            <ul id="todo_items" class="mt-3.5 mb-3.5 px-1 py-3 ">
+            </ul>
+            <!-- <li class="bg-[#c7e1e8] mx-3 py-2 border border-[#6ad7f8] shadow-2xl rounded-lg"></li> -->
+
+            <p class="font-bold py-3 px-5">You have <span id="task_count">0</span> pending task</p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="todo.js"></script>
+</body>
+
+</html>
