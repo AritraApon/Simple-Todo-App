@@ -22,6 +22,10 @@ document.getElementById('add_btn')
 
         if (todoTaskAdd.trim() === '') return;
 
+
+
+
+
         //   new Items add
         const newLi = document.createElement('li');
         newLi.classList.add(
@@ -44,6 +48,21 @@ document.getElementById('add_btn')
 
         newLi.innerText = todoTaskAdd;
 
+        //  created a div
+        const divCkDlt = document.createElement('div')
+
+
+        // input check items add
+        const checkBox = document.createElement('input');
+        checkBox.type = 'checkbox'
+        checkBox.classList.add(
+            "ml-3.5",
+            "w-5.5",
+            "h-5.5",
+            "cursor-pointer"
+        );
+
+
 
         //  remove btn
         const dltBtn = document.createElement('button');
@@ -59,9 +78,10 @@ document.getElementById('add_btn')
             "border-2",
             "border-[black]"
         );
+        newLi.append(divCkDlt)
+        divCkDlt.append(checkBox);
+        divCkDlt.append(dltBtn);
 
-
-        newLi.append(dltBtn)
 
 
         //  new items add the parent ul And remove btn
@@ -98,7 +118,7 @@ document.getElementById('dark_mood').addEventListener('click',
 
 document.getElementById('light_mood').addEventListener('click',
     function () {
-         document.body.style.backgroundColor = ' #61d3d15b'
+        document.body.style.backgroundColor = ' #61d3d15b'
         mainDiv.style.backgroundColor = 'white';
         mainDiv.style.color = 'black'
     }
